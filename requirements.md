@@ -72,8 +72,24 @@ Provide a secure user registration and login system using **JWT-based authentica
 }
 }
 `````
-### *Validation Rules*
-. email must be valid and unique
-. password must be 8+ characters and contain uppercase, lowercase, number, and special character
-. role must be one of [guest, host, admin]
+Validation Rules
+email must be valid and unique
+password must be 8+ characters and contain uppercase, lowercase, number, and special character
+role must be one of [guest, host, admin]
+Performance Criteria
+Authentication requests must complete within < 500ms
+JWT tokens expire after 1 hour
+Passwords hashed using bcrypt (min 10 salt rounds)
+
+2️⃣ Property Management System
+🎯 Objective
+Enable hosts to create, edit, and delete property listings and guests to view or search for properties.
+| Method   | Endpoint                 | Description                                   |
+| -------- | ------------------------ | --------------------------------------------- |
+| `POST`   | `/api/v1/properties`     | Create a new property listing                 |
+| `GET`    | `/api/v1/properties`     | Retrieve all property listings (with filters) |
+| `GET`    | `/api/v1/properties/:id` | Retrieve property by ID                       |
+| `PUT`    | `/api/v1/properties/:id` | Update a property listing                     |
+| `DELETE` | `/api/v1/properties/:id` | Delete a property (Host/Admin only)           |
+
 
