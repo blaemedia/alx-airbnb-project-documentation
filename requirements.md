@@ -62,3 +62,14 @@ Provide a secure user registration and login system using **JWT-based authentica
   "password": "StrongPass#2024"
 }
 `````
+### *Response (200 - OK):*
+```json
+{
+{
+  "message": "Login successful",
+  "token": "jwt_token_here",
+  "expiresIn": 3600
+}
+}
+`````
+
