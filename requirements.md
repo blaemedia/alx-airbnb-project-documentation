@@ -72,4 +72,8 @@ Provide a secure user registration and login system using **JWT-based authentica
 }
 }
 `````
+### *Validation Rules*
+. email must be valid and unique
+. password must be 8+ characters and contain uppercase, lowercase, number, and special character
+. role must be one of [guest, host, admin]
 
